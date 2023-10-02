@@ -17,7 +17,7 @@ public class ExamController {
     public ExamController(ExaminerService service) {
         this.service = service;
     }
-    // localhost:8080/exam/5
+    
     @GetMapping("/{amount}")
     public Collection<Question> getQuestions(@PathVariable int amount) {
         return service.getQuestions(amount);
