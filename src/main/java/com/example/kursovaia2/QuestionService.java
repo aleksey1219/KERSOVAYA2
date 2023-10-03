@@ -1,4 +1,4 @@
-package Interface;
+package com.example.kursovaia2;
 
 import com.example.kursovaia2.Question;
 

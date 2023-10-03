@@ -1,21 +1,20 @@
-package Service;
-
-import Interface.QuestionService;
-import com.example.kursovaia2.Question;
-import org.springframework.beans.factory.annotation.Qualifier;
-import Interface.QuestionRepository;
+package com.example.kursovaia2;
 import org.springframework.stereotype.Service;
 
 import java.util.Collection;
 import java.util.Random;
-@Service("math")
-public class MathQuestionService implements QuestionService {
-    private Random random = new Random();
+
+@Service("java")
+public class JavaQuestionService implements QuestionService {
+    private final Random random = new Random();
+
     private final QuestionRepository repository;
 
-    public MathQuestionService(@Qualifier("mathRepository") QuestionRepository repository) {
+    public JavaQuestionService(JavaQuestionRepository repository) {
         this.repository = repository;
     }
+
+
     @Override
     public Question add(String question, String answer) {
         return repository.add(new Question(question, answer));
@@ -52,4 +51,3 @@ public class MathQuestionService implements QuestionService {
         throw new NoQuestionsFound();
     }
 }
-

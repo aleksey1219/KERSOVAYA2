@@ -1,23 +1,20 @@
-package Service;
-import Interface.QuestionService;
-import com.example.kursovaia2.Question;
-import org.springframework.stereotype.Service;
-import repository.JavaQuestionRepository;
-import Interface.QuestionRepository;
+package com.example.kursovaia2;
 
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Service;
+import java.util.*;
 import java.util.Collection;
 import java.util.Random;
+@Service("math")
+public class MathQuestionService implements QuestionService {
 
-@Service("java")
-public class JavaQuestionService implements QuestionService {
     private final Random random = new Random();
 
     private final QuestionRepository repository;
 
-    public JavaQuestionService(JavaQuestionRepository repository) {
+    public MathQuestionService(@Qualifier("mathRepository") QuestionRepository repository) {
         this.repository = repository;
     }
-
 
     @Override
     public Question add(String question, String answer) {

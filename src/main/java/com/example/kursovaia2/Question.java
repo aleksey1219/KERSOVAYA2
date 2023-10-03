@@ -1,14 +1,22 @@
 package com.example.kursovaia2;
-
 import java.util.Objects;
 
 public class Question {
+
     private final String question;
     private final String answer;
 
     public Question(String question, String answer) {
         this.question = question;
         this.answer = answer;
+    }
+
+    public String getQuestion() {
+        return question;
+    }
+
+    public String getAnswer() {
+        return answer;
     }
 
     @Override
@@ -24,14 +32,6 @@ public class Question {
         return Objects.hash(question, answer);
     }
 
-    public String getQuestion() {
-        return question;
-    }
-
-    public String getAnswer() {
-        return answer;
-    }
-
     @Override
     public String toString() {
         return "Question{" +
@@ -40,4 +40,3 @@ public class Question {
                 '}';
     }
 }
-

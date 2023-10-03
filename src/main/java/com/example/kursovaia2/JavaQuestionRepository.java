@@ -1,7 +1,7 @@
-package repository;
+package com.example.kursovaia2;
 
-import Interface.QuestionRepository;
 import com.example.kursovaia2.Question;
+import com.example.kursovaia2.QuestionRepository;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
@@ -10,22 +10,24 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 
-@Service
-public class MathQuestionRepository implements QuestionRepository {
+@Service("javaRepository")
+public class JavaQuestionRepository implements QuestionRepository {
+
     private final Set<Question> questions = new HashSet<>();
+
     @PostConstruct
     void init() {
-        add("q_math1", "a_math1");
-        add("q_math2", "a_math2");
-        add("q_math3", "a_math3");
-        add("q_math4", "a_math4");
-        add("q_math5", "a_math5");
+        add("q_java1", "a_java1");
+        add("q_java2", "a_java2");
+        add("q_java3", "a_java3");
+        add("q_java4", "a_java4");
+        add("q_java5", "a_java5");
     }
 
-  @Override
-public Question add(String question, String answer) {
-    return add(new Question(question, answer));
-}
+    @Override
+    public Question add(String question, String answer) {
+        return add(new Question(question, answer));
+    }
 
     @Override
     public Question add(Question question) {

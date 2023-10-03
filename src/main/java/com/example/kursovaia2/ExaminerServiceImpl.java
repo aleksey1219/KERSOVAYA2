@@ -1,13 +1,13 @@
-package Service;
+package com.example.kursovaia2;
 
-import Interface.ExaminerService;
-import Interface.QuestionService;
-import com.example.kursovaia2.Question;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Service;
 
 import java.util.*;
 
+@Service
 public class ExaminerServiceImpl implements ExaminerService {
+
     private final Random random = new Random();
 
     private final QuestionService javaService;

@@ -1,4 +1,4 @@
-package Service;
+package com.example.kursovaia2;
 
 public class NoQuestionsFound extends RuntimeException {
     public NoQuestionsFound() {

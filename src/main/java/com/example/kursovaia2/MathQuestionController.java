@@ -1,6 +1,6 @@
-package controller;
-import Interface.QuestionService;
-import Service.MathQuestionService;
+package com.example.kursovaia2;
+import com.example.kursovaia2.QuestionService;
+import com.example.kursovaia2.MathQuestionService;
 import com.example.kursovaia2.Question;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,7 +18,7 @@ public class MathQuestionController {
     public MathQuestionController(MathQuestionService questionService) {
         this.questionService = questionService;
     }
-    // localhost:8080/exam/java/add?question=foo
+
     @GetMapping("/add")
     public Question add(@RequestParam String question, @RequestParam String answer) {
         return questionService.add(question, answer);

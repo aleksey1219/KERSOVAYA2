@@ -1,5 +1,5 @@
-package controller;
-import Interface.ExaminerService;
+package com.example.kursovaia2;
+import com.example.kursovaia2.ExaminerService;
 import com.example.kursovaia2.Question;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -17,7 +17,7 @@ public class ExamController {
     public ExamController(ExaminerService service) {
         this.service = service;
     }
-    // localhost:8080/exam/5
+
     @GetMapping("/{amount}")
     public Collection<Question> getQuestions(@PathVariable int amount) {
         return service.getQuestions(amount);

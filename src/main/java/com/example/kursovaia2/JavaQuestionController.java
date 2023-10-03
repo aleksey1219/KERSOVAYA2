@@ -1,6 +1,6 @@
-package controller;
+package com.example.kursovaia2;
 
-import Interface.QuestionService;
+import com.example.kursovaia2.QuestionService;
 import com.example.kursovaia2.Question;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.GetMapping;
